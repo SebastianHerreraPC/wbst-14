@@ -10,6 +10,12 @@ body {
   grid-gap: 2em;
   grid-template-columns: repeat(8, 1fr);
   grid-template-rows: 100px repeat(2, 1fr) 100px;
+  grid-template-areas:
+    "header header header header header header header header"
+    ". sidebar main main main main top-widget ."
+    ". sidebar main main main main bottom-widget ."
+    "footer footer footer footer footer footer footer footer";
+  padding: 20px;
   border: 1px solid red;
 }
 
@@ -19,19 +25,25 @@ body {
 }
 .header {
   background-color: #5d2e61;
+  grid-area: header;
 }
 .main {
+  grid-area: main;
   background-color: #873c8f;
 }
 .sidebar {
   background-color: #bc6bca;
+  grid-area: sidebar;
 }
 .widgeta {
+  grid-area: top-widget;
   background-color: #2654cf;
 }
 .widgetb {
+  grid-area: bottom-widget;
   background-color: #257179;
 }
 .footer {
   background-color: #5d2e61;
+  grid-area: footer;
 }
